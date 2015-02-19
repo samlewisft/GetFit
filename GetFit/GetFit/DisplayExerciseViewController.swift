@@ -12,11 +12,11 @@ class DisplayExerciseViewController: UIViewController {
     
     var desc : String?
     
-    @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var descTextView: UITextView!
     
     func configureView() {
         // Update the user interface for the detail item.
-        descLabel.text = desc!
+        descTextView.text = desc!
         
        
     }
