@@ -12,12 +12,13 @@ class DisplayExerciseViewController: UIViewController {
     
     var desc : String?
     
+    @IBOutlet weak var ExerciseImage: UIImageView!
     @IBOutlet weak var descTextView: UITextView!
     
     func configureView() {
         // Update the user interface for the detail item.
         descTextView.text = desc!
-        
+       //curl-wrist.png
        
     }
     
