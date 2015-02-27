@@ -11,22 +11,18 @@ import UIKit
 class DisplayExerciseViewController: UIViewController {
     
     var desc : String?
-    
-    @IBOutlet weak var ExerciseImage: UIImageView!
-    @IBOutlet weak var descTextView: UITextView!
-    
-    func configureView() {
-        // Update the user interface for the detail item.
-        descTextView.text = desc!
-       //curl-wrist.png
-       
-    }
+    var imageName : UIImage?
+    var label : String?
+    @IBOutlet var ExerciseImage: UIImageView!
+    @IBOutlet var descTextView: UITextView!
+    @IBOutlet weak var exerciseLabel: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        self.configureView()
-        
+        ExerciseImage.image = imageName
+        descTextView.text = desc!
+        exerciseLabel.text = label!
         
     }
     

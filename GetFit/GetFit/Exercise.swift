@@ -12,4 +12,5 @@ struct Exercise {
     let exerciseCategory : String
     let name : String
     let desc : String
+    let imageName : String
 }
