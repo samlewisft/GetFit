@@ -13,21 +13,19 @@ class DisplayExerciseViewController: UIViewController {
     var desc : String?
     var imageName : UIImage?
     var imageNameTwo : UIImage?
-    var label : String?
+    var Wallpaper : UIImage?
     
     @IBOutlet var ExerciseImage: UIImageView!
     @IBOutlet weak var IMG2: UIImageView!
-
     @IBOutlet var descTextView: UITextView!
-    @IBOutlet weak var exerciseLabel: UILabel!
-
+    @IBOutlet var BackgroundImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        BackgroundImage.image =  Wallpaper!
         ExerciseImage.image = imageName!
         IMG2.image = imageNameTwo!
         descTextView.text = desc!
-        exerciseLabel.text = label!
         
     }
     
