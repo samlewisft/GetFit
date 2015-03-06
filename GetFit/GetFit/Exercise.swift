@@ -13,4 +13,5 @@ struct Exercise {
     let name : String
     let desc : String
     let imageName : String
+    let imageNameTwo : String
 }
