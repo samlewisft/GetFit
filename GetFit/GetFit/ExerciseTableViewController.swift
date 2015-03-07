@@ -13,6 +13,7 @@ class ExerciseTableViewController : UITableViewController, UISearchBarDelegate, 
     
     var filteredExer = [Exercise]()
     
+    
     override func viewDidLoad() {
         
         tableView.bounces = true
