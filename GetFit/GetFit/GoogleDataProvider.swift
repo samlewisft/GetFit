@@ -37,7 +37,7 @@ class GoogleDataProvider {
       if let json = NSJSONSerialization.JSONObjectWithData(data, options:nil, error:nil) as? NSDictionary
         
       {
-        println(json["error_message"]!)
+        //println(json["error_message"]!)
         if let results = json["results"] as? NSArray {
           for rawPlace:AnyObject in results {
             let place = GooglePlace(dictionary: rawPlace as NSDictionary, acceptedTypes: types)
