@@ -26,7 +26,8 @@ extension UIView {
       activity.startAnimating()
       addSubview(lockView)
       
-      UIView.animateWithDuration(0.2) {
+      UIView.animateWithDuration(0.2)
+        {
         lockView.alpha = 1.0
       }
     }

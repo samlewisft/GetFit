@@ -31,6 +31,9 @@
 		597228BE1ABE81C000172906 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 597228B21ABE81C000172906 /* QuartzCore.framework */; };
 		597228BF1ABE81C000172906 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 597228B31ABE81C000172906 /* SystemConfiguration.framework */; };
 		597228C81ABE82D000172906 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 597228C71ABE82D000172906 /* GoogleMaps.bundle */; };
+		597228CA1ABFA86800172906 /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597228C91ABFA86800172906 /* MasterTableViewController.swift */; };
+		597228CC1ABFA9B000172906 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597228CB1ABFA9B000172906 /* AddViewController.swift */; };
+		597228CE1ABFA9BD00172906 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597228CD1ABFA9BD00172906 /* DetailsViewController.swift */; };
 		5E07B5CA1A94EDD300B45151 /* DisplayExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07B5C91A94EDD300B45151 /* DisplayExerciseViewController.swift */; };
 		5ECB9BCC1A94DA8D0029940F /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB9BCB1A94DA8D0029940F /* Exercise.swift */; };
 		712D945819774FBB0087530D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712D945719774FBB0087530D /* AppDelegate.swift */; };
@@ -76,6 +79,9 @@
 		597228B31ABE81C000172906 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		597228C01ABE820100172906 /* GetFIt-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GetFIt-Bridging-Header.h"; sourceTree = "<group>"; };
 		597228C71ABE82D000172906 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = "../../../../../../../../../../Users/samlewis/Downloads/GoogleMaps-iOS-1.9.1/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle"; sourceTree = "<group>"; };
+		597228C91ABFA86800172906 /* MasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
+		597228CB1ABFA9B000172906 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		597228CD1ABFA9BD00172906 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		5E07B5C91A94EDD300B45151 /* DisplayExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayExerciseViewController.swift; sourceTree = "<group>"; };
 		5ECB9BCB1A94DA8D0029940F /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		712D945219774FBB0087530D /* GetFIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetFIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +129,9 @@
 		597228981ABE7FC900172906 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				597228CB1ABFA9B000172906 /* AddViewController.swift */,
+				597228CD1ABFA9BD00172906 /* DetailsViewController.swift */,
+				597228C91ABFA86800172906 /* MasterTableViewController.swift */,
 				597228961ABE7FB900172906 /* TypesTableViewController.swift */,
 				597228941ABE7FA800172906 /* PlaceMarker.swift */,
 				597228921ABE7F9E00172906 /* MapViewController.swift */,
@@ -345,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				597228A01ABE803B00172906 /* MarkerInfoView.swift in Sources */,
+				597228CA1ABFA86800172906 /* MasterTableViewController.swift in Sources */,
 				712D945819774FBB0087530D /* AppDelegate.swift in Sources */,
 				597228A41ABE804500172906 /* UIViewExtension.swift in Sources */,
 				5ECB9BCC1A94DA8D0029940F /* Exercise.swift in Sources */,
@@ -354,6 +364,8 @@
 				5972289B1ABE800F00172906 /* GoogleDataProvider.swift in Sources */,
 				597228971ABE7FB900172906 /* TypesTableViewController.swift in Sources */,
 				5E07B5CA1A94EDD300B45151 /* DisplayExerciseViewController.swift in Sources */,
+				597228CE1ABFA9BD00172906 /* DetailsViewController.swift in Sources */,
+				597228CC1ABFA9B000172906 /* AddViewController.swift in Sources */,
 				5972289D1ABE801900172906 /* GooglePlace.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

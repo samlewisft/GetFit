@@ -164,8 +164,8 @@ GMSMapViewDelegate {
   
   
     @IBOutlet var mapView: GMSMapView!
-  @IBOutlet weak var mapCenterPinImage: UIImageView!
-  @IBOutlet weak var pinImageVerticalConstraint: NSLayoutConstraint!
+  @IBOutlet var mapCenterPinImage: UIImageView!
+  @IBOutlet var pinImageVerticalConstraint: NSLayoutConstraint!
   //var searchedTypes = ["gym", "cafe", "restaurant",]
   var searchedTypes = ["gym", "bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant", ]
 
