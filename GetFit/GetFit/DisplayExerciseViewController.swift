@@ -16,7 +16,7 @@ class DisplayExerciseViewController: UIViewController {
     var Wallpaper : UIImage?
     
     @IBOutlet var ExerciseImage: UIImageView!
-    @IBOutlet weak var IMG2: UIImageView!
+    @IBOutlet var IMG2: UIImageView!
     @IBOutlet var descTextView: UITextView!
     @IBOutlet var BackgroundImage: UIImageView!
     
@@ -26,7 +26,11 @@ class DisplayExerciseViewController: UIViewController {
         ExerciseImage.image = imageName!
         IMG2.image = imageNameTwo!
         descTextView.text = desc!
+        descTextView.textColor = UIColor.whiteColor()
+        descTextView.textAlignment = NSTextAlignment.Center
+        descTextView.selectable = false;
         
+
     }
     
     override func didReceiveMemoryWarning() {

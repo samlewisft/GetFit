@@ -8,9 +8,9 @@
 
 import UIKit
 
-class AddViewController: UIViewController {
+class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate,UIPickerViewDataSource, UIPickerViewDelegate {
     
-
+    var WallpaperImage : UIImage?
     @IBOutlet var selectedDate: UILabel!
 
     @IBOutlet var logDate: UIDatePicker! = UIDatePicker()
@@ -18,8 +18,27 @@ class AddViewController: UIViewController {
     @IBOutlet var logWeight: UITextField! = UITextField()
     @IBOutlet var logReps: UITextField!
     @IBOutlet var logComments: UITextView!
+    @IBOutlet var Wallpaper: UIImageView!
+    
+    @IBOutlet var myLabel: UILabel!
+    @IBOutlet var myPicker: UIPickerView!
+    let pickerData = ["Arms","Back","Chest","Core","Delts","Legs","Full Body"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.logTitle.delegate = self;
+        self.logComments.delegate = self;
+        self.logWeight.delegate = self;
+        self.logReps.delegate = self;
+        myPicker.delegate = self
+        myPicker.dataSource = self
+
+        
+      //  Wallpaper.image = WallpaperImage!
+        
+        
+        
+
         
         // Do any additional setup after loading the view.
     }
@@ -80,8 +99,33 @@ class AddViewController: UIViewController {
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
     
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     
+    func textViewShouldReturn(textView: UITextView!) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     
+    //MARK: - Delegates and data sources
+    //MARK: Data Sources
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    //MARK: Delegates
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+        return pickerData[row]
+    }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        myLabel.text = pickerData[row]
+    }
     /*
     // MARK: - Navigation
     

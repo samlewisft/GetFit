@@ -26,6 +26,7 @@ class MasterTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -53,7 +54,9 @@ class MasterTableViewController: UITableViewController {
     }
     
     
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cellid", forIndexPath: indexPath) as UITableViewCell
@@ -61,8 +64,19 @@ class MasterTableViewController: UITableViewController {
         
         var todoItem :NSDictionary = toDoItems.objectAtIndex(indexPath.row) as NSDictionary
         
+        if (indexPath.row % 2 == 0) {
+            cell.backgroundColor = UIColor.clearColor()
+            
+        } else {
+            //set cell opacity
+            cell.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.2)
+            cell.textLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
+        }
+
+        self.tableView.rowHeight = 70
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "wallpaper5"))
         
-        
+        cell.textLabel?.textColor = UIColor.whiteColor()
         cell.textLabel?.text = todoItem.objectForKey("title") as? String
         
         return cell

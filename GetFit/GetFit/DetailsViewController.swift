@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailsViewController: UIViewController {
+class DetailsViewController: UIViewController, UITextFieldDelegate {
 
     //@IBOutlet weak var titleTextField: UITextField!
     //@IBOutlet weak var descriptionTextField: UITextView!
@@ -23,7 +23,6 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         titleText.userInteractionEnabled=false
         titleComments.userInteractionEnabled=false
         titleReps.userInteractionEnabled=false
@@ -68,7 +67,11 @@ class DetailsViewController: UIViewController {
         
         self.navigationController?.popViewControllerAnimated(true)
     }
-
+    
+    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     /*
     // MARK: - Navigation
 
