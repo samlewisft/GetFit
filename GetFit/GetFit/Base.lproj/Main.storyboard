@@ -220,7 +220,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T4g-A5-QFZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047" y="-588"/>
+            <point key="canvasLocation" x="1185" y="-644"/>
         </scene>
         <!--New Workout-->
         <scene sceneID="4BS-V2-dC3">
@@ -411,7 +411,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dui-kc-9Iw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1541" y="-931"/>
+            <point key="canvasLocation" x="1713" y="-975"/>
         </scene>
         <!--View Workout-->
         <scene sceneID="ud9-f7-T3n">
@@ -548,7 +548,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ihG-Tx-C4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1541" y="-244"/>
+            <point key="canvasLocation" x="1713" y="-328"/>
         </scene>
         <!--Local Map-->
         <scene sceneID="OZt-NA-gJR">
