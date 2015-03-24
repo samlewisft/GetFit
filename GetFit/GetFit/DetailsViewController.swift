@@ -12,12 +12,15 @@ class DetailsViewController: UIViewController, UITextFieldDelegate {
 
     //@IBOutlet weak var titleTextField: UITextField!
     //@IBOutlet weak var descriptionTextField: UITextView!
-    
+    @IBOutlet var titleDistance: UITextField!
     @IBOutlet var titleDate: UITextField!
+    @IBOutlet var titleTime: UITextField!
+    @IBOutlet var titleType: UITextField!
     @IBOutlet var titleReps: UITextField!
     @IBOutlet var titleWeight: UITextField!
     @IBOutlet var titleText: UITextField!
     @IBOutlet var titleComments: UITextView!
+    
     var todoData:NSDictionary = NSDictionary()
     
     
@@ -28,7 +31,9 @@ class DetailsViewController: UIViewController, UITextFieldDelegate {
         titleReps.userInteractionEnabled=false
         titleWeight.userInteractionEnabled=false
         titleDate.userInteractionEnabled=false
-        
+        titleDistance.userInteractionEnabled=false
+        titleType.userInteractionEnabled=false
+        titleTime.userInteractionEnabled=false
         
         
         titleText.text=todoData.objectForKey("title") as String
@@ -36,7 +41,9 @@ class DetailsViewController: UIViewController, UITextFieldDelegate {
         titleReps.text=todoData.objectForKey("reps") as String
         titleWeight.text=todoData.objectForKey("weight") as String
         titleDate.text=todoData.objectForKey("date") as String
-        
+        titleDistance.text=todoData.objectForKey("distance") as String
+        titleType.text=todoData.objectForKey("type") as String
+        titleTime.text=todoData.objectForKey("time") as String
         
         
 
@@ -72,6 +79,8 @@ class DetailsViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return false
     }
+    
+    
     /*
     // MARK: - Navigation
 

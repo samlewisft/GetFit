@@ -17,9 +17,11 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
     @IBOutlet var logTitle: UITextField!
     @IBOutlet var logWeight: UITextField! = UITextField()
     @IBOutlet var logReps: UITextField!
+    @IBOutlet var logDistance: UITextField!
     @IBOutlet var logComments: UITextView!
+    @IBOutlet var logTime: UITextField!
     @IBOutlet var Wallpaper: UIImageView!
-    
+    @IBOutlet var logType: UILabel!
     @IBOutlet var myLabel: UILabel!
     @IBOutlet var myPicker: UIPickerView!
     let pickerData = ["Arms","Back","Chest","Core","Delts","Legs","Full Body"]
@@ -30,6 +32,8 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
         self.logComments.delegate = self;
         self.logWeight.delegate = self;
         self.logReps.delegate = self;
+        self.logDistance.delegate = self;
+        self.logTime.delegate = self;
         myPicker.delegate = self
         myPicker.dataSource = self
 
@@ -71,8 +75,11 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
         dataSet.setObject(logWeight.text, forKey: "weight")
         dataSet.setObject(logReps.text, forKey: "reps")
         dataSet.setObject(selectedDate.text!, forKey: "date")
-        
-        println("title value \(selectedDate.description) and description is \(logComments.text)")
+        dataSet.setObject(logDistance.text!, forKey: "distance")
+        dataSet.setObject(logTime.text!, forKey: "time")
+        dataSet.setObject(myLabel.text!, forKey: "type")
+
+        println("title value \(selectedDate.description) and description is \(logDate.description)")
         
         
         if((itemList) != nil){
@@ -125,6 +132,37 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         myLabel.text = pickerData[row]
+    }
+    
+    //func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+  //      let titleData = pickerData[row]
+    //    var myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.whiteColor()])
+    //    return myTitle
+    //}
+    
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView {
+        var pickerLabel = view as UILabel!
+        if view == nil {  //if no label there yet
+            pickerLabel = UILabel()
+            //color the label's background
+            let hue = CGFloat(row)/CGFloat(pickerData.count)
+            pickerLabel.backgroundColor = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
+            pickerLabel.textAlignment = .Center
+        }
+        let titleData = pickerData[row]
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 26.0)!,NSForegroundColorAttributeName:UIColor.blackColor()])
+        pickerLabel!.attributedText = myTitle
+        
+        return pickerLabel
+        
+    }
+    
+    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 36.0
+    }
+    
+    func pickerView(pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+        return 120
     }
     /*
     // MARK: - Navigation
