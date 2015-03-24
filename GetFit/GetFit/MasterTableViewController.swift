@@ -71,6 +71,8 @@ class MasterTableViewController: UITableViewController {
             //set cell opacity
             cell.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.2)
             cell.textLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
+            cell.detailTextLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
+
         }
 
         self.tableView.rowHeight = 70
@@ -78,6 +80,8 @@ class MasterTableViewController: UITableViewController {
         
         cell.textLabel?.textColor = UIColor.whiteColor()
         cell.textLabel?.text = todoItem.objectForKey("title") as? String
+        cell.detailTextLabel?.textColor = UIColor.whiteColor()
+        cell.detailTextLabel?.text = todoItem.objectForKey("date") as? String
         
         return cell
     }

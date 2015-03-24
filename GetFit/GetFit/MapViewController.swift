@@ -16,18 +16,23 @@ GMSMapViewDelegate {
   @IBAction func refreshPlaces(sender: AnyObject) {
     fetchNearbyPlaces(mapView.camera.target)
   }
+    
   @IBOutlet var addressLabel: UILabel!
+    
+    @IBOutlet var segmentSegue: UISegmentedControl!
   @IBAction func mapTypeSegmentPressed(sender: AnyObject) {
-    let segmentedControl = sender as UISegmentedControl
-    switch segmentedControl.selectedSegmentIndex {
+    let segmentSegue = sender as UISegmentedControl
+    switch segmentSegue.selectedSegmentIndex {
     case 0:
       mapView.mapType = kGMSTypeNormal
     case 1:
       mapView.mapType = kGMSTypeSatellite
     case 2:
       mapView.mapType = kGMSTypeHybrid
+    case 3:
+    self.performSegueWithIdentifier("goBack", sender: self)
     default:
-      mapView.mapType = mapView.mapType
+        mapView.mapType = mapView.mapType
     }
   }
   
@@ -213,15 +218,16 @@ GMSMapViewDelegate {
     }
   }
 
-  
+
     //
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+ override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "Types Segue" {
       let navigationController = segue.destinationViewController as UINavigationController
       let controller = segue.destinationViewController.topViewController as TypesTableViewController
       controller.selectedTypes = searchedTypes
       controller.delegate = self
     }
+
   }
   
   // MARK: - Types Controller Delegate
