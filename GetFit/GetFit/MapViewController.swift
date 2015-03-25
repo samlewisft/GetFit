@@ -172,7 +172,7 @@ GMSMapViewDelegate {
   @IBOutlet var mapCenterPinImage: UIImageView!
   @IBOutlet var pinImageVerticalConstraint: NSLayoutConstraint!
   //var searchedTypes = ["gym", "cafe", "restaurant",]
-  var searchedTypes = ["gym", "bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant", ]
+  var searchedTypes = ["gym", "bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant", "park", ]
 
   
   let locationManager = CLLocationManager()

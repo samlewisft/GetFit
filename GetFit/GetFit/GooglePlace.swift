@@ -35,7 +35,7 @@ class GooglePlace {
     }
     
     var foundType = "restaurant"
-    let possibleTypes = acceptedTypes.count > 0 ? acceptedTypes : ["gym", "bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant"]
+    let possibleTypes = acceptedTypes.count > 0 ? acceptedTypes : ["gym", "bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant", "taxi", ]
     for type in dictionary["types"] as [String] {
       if contains(possibleTypes, type) {
         foundType = type
