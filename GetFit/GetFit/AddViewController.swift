@@ -1,9 +1,9 @@
 //
 //  AddViewController.swift
-//  ToDoSample
+//  GetFit
 //
-//  Created by Amalan Dhananjayan on 10/20/14.
-//  Copyright (c) 2014 Batzee. All rights reserved.
+//  Created by Samuel Lewis on 18/02/2015.
+//  Copyright (c) 2015 Samuel Lewis. All rights reserved.
 //
 
 import UIKit

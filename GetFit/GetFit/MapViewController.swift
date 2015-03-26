@@ -1,9 +1,9 @@
 //
 //  MapViewController.swift
-//  Feed Me
+//  GetFit
 //
-//  Created by Ron Kliffer on 8/30/14.
-//  Copyright (c) 2014 Ron Kliffer. All rights reserved.
+//  Created by Samuel Lewis on 18/02/2015.
+//  Copyright (c) 2015 Samuel Lewis. All rights reserved.
 //
 
 import UIKit
