@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5939F43E1AA91C1200EBA2A6 /* arms_barbel_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5939F43C1AA91C1200EBA2A6 /* arms_barbel_1.jpg */; };
-		5939F43F1AA91C1200EBA2A6 /* arms_barbel_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5939F43D1AA91C1200EBA2A6 /* arms_barbel_2.jpg */; };
 		597228931ABE7F9E00172906 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597228921ABE7F9E00172906 /* MapViewController.swift */; };
 		597228951ABE7FA800172906 /* PlaceMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597228941ABE7FA800172906 /* PlaceMarker.swift */; };
 		597228971ABE7FB900172906 /* TypesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597228961ABE7FB900172906 /* TypesTableViewController.swift */; };
@@ -54,8 +52,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5939F43C1AA91C1200EBA2A6 /* arms_barbel_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = arms_barbel_1.jpg; path = "../../../../../../../../../../Users/samlewis/Desktop/Project Images/arms_barbel_1.jpg"; sourceTree = "<group>"; };
-		5939F43D1AA91C1200EBA2A6 /* arms_barbel_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = arms_barbel_2.jpg; path = "../../../../../../../../../../Users/samlewis/Desktop/Project Images/arms_barbel_2.jpg"; sourceTree = "<group>"; };
 		597228921ABE7F9E00172906 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		597228941ABE7FA800172906 /* PlaceMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceMarker.swift; sourceTree = "<group>"; };
 		597228961ABE7FB900172906 /* TypesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypesTableViewController.swift; sourceTree = "<group>"; };
@@ -129,33 +125,32 @@
 		597228981ABE7FC900172906 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				597228CB1ABFA9B000172906 /* AddViewController.swift */,
-				597228CD1ABFA9BD00172906 /* DetailsViewController.swift */,
-				597228C91ABFA86800172906 /* MasterTableViewController.swift */,
-				597228961ABE7FB900172906 /* TypesTableViewController.swift */,
-				597228941ABE7FA800172906 /* PlaceMarker.swift */,
-				597228921ABE7F9E00172906 /* MapViewController.swift */,
+				599F88161AC3C0060061F795 /* Display Exercises */,
+				599F88181AC3C0180061F795 /* Gym Log */,
+				599F88171AC3C0100061F795 /* Find A Gym */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		597228991ABE7FD200172906 /* Model */ = {
+		597228991ABE7FD200172906 /* Google Maps Model */ = {
 			isa = PBXGroup;
 			children = (
+				5972289E1ABE801D00172906 /* Map Marker View */,
+				597228941ABE7FA800172906 /* PlaceMarker.swift */,
 				597228A31ABE804500172906 /* UIViewExtension.swift */,
 				5972289C1ABE801900172906 /* GooglePlace.swift */,
 				5972289A1ABE800F00172906 /* GoogleDataProvider.swift */,
 			);
-			name = Model;
+			name = "Google Maps Model";
 			sourceTree = "<group>";
 		};
-		5972289E1ABE801D00172906 /* Views */ = {
+		5972289E1ABE801D00172906 /* Map Marker View */ = {
 			isa = PBXGroup;
 			children = (
 				597228A11ABE804000172906 /* MarkerInfoView.xib */,
 				5972289F1ABE803B00172906 /* MarkerInfoView.swift */,
 			);
-			name = Views;
+			name = "Map Marker View";
 			sourceTree = "<group>";
 		};
 		597228A51ABE810A00172906 /* Frameworks */ = {
@@ -178,6 +173,35 @@
 			);
 			name = Frameworks;
 			path = GetFit;
+			sourceTree = "<group>";
+		};
+		599F88161AC3C0060061F795 /* Display Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				5ECB9BCB1A94DA8D0029940F /* Exercise.swift */,
+				716A427419775A9F003BD279 /* ExerciseTableViewController.swift */,
+				5E07B5C91A94EDD300B45151 /* DisplayExerciseViewController.swift */,
+			);
+			name = "Display Exercises";
+			sourceTree = "<group>";
+		};
+		599F88171AC3C0100061F795 /* Find A Gym */ = {
+			isa = PBXGroup;
+			children = (
+				597228961ABE7FB900172906 /* TypesTableViewController.swift */,
+				597228921ABE7F9E00172906 /* MapViewController.swift */,
+			);
+			name = "Find A Gym";
+			sourceTree = "<group>";
+		};
+		599F88181AC3C0180061F795 /* Gym Log */ = {
+			isa = PBXGroup;
+			children = (
+				597228C91ABFA86800172906 /* MasterTableViewController.swift */,
+				597228CB1ABFA9B000172906 /* AddViewController.swift */,
+				597228CD1ABFA9BD00172906 /* DetailsViewController.swift */,
+			);
+			name = "Gym Log";
 			sourceTree = "<group>";
 		};
 		712D944919774FBB0087530D = {
@@ -203,18 +227,12 @@
 		712D945419774FBB0087530D /* GetFit */ = {
 			isa = PBXGroup;
 			children = (
-				5ECB9BCB1A94DA8D0029940F /* Exercise.swift */,
 				712D945719774FBB0087530D /* AppDelegate.swift */,
 				712D945B19774FBB0087530D /* Main.storyboard */,
-				5939F43C1AA91C1200EBA2A6 /* arms_barbel_1.jpg */,
-				5939F43D1AA91C1200EBA2A6 /* arms_barbel_2.jpg */,
 				597228981ABE7FC900172906 /* Controllers */,
-				597228991ABE7FD200172906 /* Model */,
-				5972289E1ABE801D00172906 /* Views */,
+				597228991ABE7FD200172906 /* Google Maps Model */,
 				712D945E19774FBB0087530D /* Images.xcassets */,
 				712D945519774FBB0087530D /* Supporting Files */,
-				716A427419775A9F003BD279 /* ExerciseTableViewController.swift */,
-				5E07B5C91A94EDD300B45151 /* DisplayExerciseViewController.swift */,
 			);
 			path = GetFit;
 			sourceTree = "<group>";
@@ -331,10 +349,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				712D945D19774FBB0087530D /* Main.storyboard in Resources */,
-				5939F43F1AA91C1200EBA2A6 /* arms_barbel_2.jpg in Resources */,
 				597228A21ABE804000172906 /* MarkerInfoView.xib in Resources */,
 				597228C81ABE82D000172906 /* GoogleMaps.bundle in Resources */,
-				5939F43E1AA91C1200EBA2A6 /* arms_barbel_1.jpg in Resources */,
 				712D945F19774FBB0087530D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
