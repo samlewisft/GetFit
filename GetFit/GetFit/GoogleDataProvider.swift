@@ -95,7 +95,7 @@ class GoogleDataProvider {
             if let polyline = route["overview_polyline"] as AnyObject? as? [String : String] {
               if let points = polyline["points"] as AnyObject? as? String {
                 encodedRoute = points
-               // println(json["error_message"]!)
+                //println(json["error_message"]!)
               }
             }
           }

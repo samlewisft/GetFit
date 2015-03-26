@@ -14,7 +14,7 @@ protocol TypesTableViewControllerDelegate: class {
 
 class TypesTableViewController: UITableViewController {
   
-  let possibleTypesDictionary = ["gym":"Gym", "bakery":"Bakery", "bar":"Bar", "cafe":"Cafe", "grocery_or_supermarket":"Supermarket", "restaurant":"Restaurant", "park":"Park"]
+  let possibleTypesDictionary = ["gym":"Gym", "bakery":"Bakery", "bar":"Bar", "cafe":"Cafe", "grocery_or_supermarket":"Supermarket", "restaurant":"Restaurant"]
   
   
 
