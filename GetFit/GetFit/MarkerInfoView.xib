@@ -26,7 +26,7 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walking" translatesAutoresizingMaskIntoConstraints="NO" id="HXI-I9-qMO">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="walking" translatesAutoresizingMaskIntoConstraints="NO" id="HXI-I9-qMO">
                     <rect key="frame" x="50" y="100" width="50" height="50"/>
                 </imageView>
             </subviews>
@@ -49,6 +49,6 @@
         </view>
     </objects>
     <resources>
-        <image name="walking" width="50" height="50"/>
+        <image name="walking" width="35" height="35"/>
     </resources>
 </document>

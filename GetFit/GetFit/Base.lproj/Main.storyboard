@@ -240,15 +240,6 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wallpaper5" translatesAutoresizingMaskIntoConstraints="NO" id="bCR-gL-Emb">
                                         <rect key="frame" x="-1" y="-30" width="323" height="534"/>
                                     </imageView>
-                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1ss-Do-zUA">
-                                        <rect key="frame" x="2" y="298" width="320" height="162"/>
-                                        <date key="date" timeIntervalSinceReferenceDate="448770100.54231">
-                                            <!--2015-03-23 02:21:40 +0000-->
-                                        </date>
-                                        <connections>
-                                            <action selector="datePickerAction:" destination="Eya-5N-RA1" eventType="valueChanged" id="Ih6-Mq-oU1"/>
-                                        </connections>
-                                    </datePicker>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hLr-pw-fFK">
                                         <rect key="frame" x="23" y="29" width="274" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -379,6 +370,15 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1ss-Do-zUA">
+                                        <rect key="frame" x="2" y="298" width="320" height="162"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="448770100.54231">
+                                            <!--2015-03-23 02:21:40 +0000-->
+                                        </date>
+                                        <connections>
+                                            <action selector="datePickerAction:" destination="Eya-5N-RA1" eventType="valueChanged" id="Ih6-Mq-oU1"/>
+                                        </connections>
+                                    </datePicker>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -431,6 +431,12 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wallpaper5" translatesAutoresizingMaskIntoConstraints="NO" id="wTq-yZ-MMj">
                                         <rect key="frame" x="-1" y="-47" width="323" height="534"/>
                                     </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L62-nC-pPw">
+                                        <rect key="frame" x="27" y="96" width="266" height="87"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -485,12 +491,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L62-nC-pPw">
-                                <rect key="frame" x="27" y="160" width="266" height="87"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fkv-Qi-3A2">
                                 <rect key="frame" x="115" y="316" width="90" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -643,7 +643,7 @@
                         <viewControllerLayoutGuide type="bottom" id="LWq-7F-jhp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9Ro-do-qRk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4bw-Me-db0">
@@ -653,7 +653,7 @@
                                         <rect key="frame" x="0.0" y="-5" width="320" height="800"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rkg-Bg-X8C">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="510"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="585"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gRi-ei-t3F">
                                                 <rect key="frame" x="73" y="20" width="174" height="158"/>
@@ -712,7 +712,7 @@
                             <constraint firstAttribute="height" secondItem="dDN-iU-TU5" secondAttribute="height" priority="250" id="zYz-Vm-AVD"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Title" id="lm0-dm-vsO"/>
                     <connections>
                         <outlet property="BackgroundImage" destination="rkg-Bg-X8C" id="KXu-Sn-n4E"/>

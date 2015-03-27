@@ -2,8 +2,7 @@
 //  AddViewController.swift
 //  GetFit
 //
-//  Created by Samuel Lewis on 18/02/2015.
-//  Copyright (c) 2015 Samuel Lewis. All rights reserved.
+//  Created by Samuel Lewis.
 //
 
 import UIKit
@@ -67,7 +66,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
         
         var userdefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults();
         
-        var itemList:NSMutableArray? = userdefaults.objectForKey("itemList") as?NSMutableArray
+        var logList:NSMutableArray? = userdefaults.objectForKey("logList") as?NSMutableArray
         
         var dataSet:NSMutableDictionary = NSMutableDictionary()
         dataSet.setObject(logTitle.text, forKey: "title")
@@ -82,23 +81,23 @@ class AddViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
         println("title value \(selectedDate.description) and description is \(logDate.description)")
         
         
-        if((itemList) != nil){
+        if((logList) != nil){
             
             var newMutableList: NSMutableArray = NSMutableArray()
             
-            for dict:AnyObject in itemList!{
+            for dict:AnyObject in logList!{
                 newMutableList.addObject(dict as NSDictionary)
             }
             
-            userdefaults.removeObjectForKey("itemList")
+            userdefaults.removeObjectForKey("logList")
             newMutableList.addObject(dataSet)
-            userdefaults.setObject(newMutableList, forKey: "itemList")
+            userdefaults.setObject(newMutableList, forKey: "logList")
             
         }else{
-            //userdefaults.removeObjectForKey("itemList")
-            itemList=NSMutableArray()
-            itemList!.addObject(dataSet)
-            userdefaults.setObject(itemList, forKey: "itemList")
+            //userdefaults.removeObjectForKey("logList")
+            logList=NSMutableArray()
+            logList!.addObject(dataSet)
+            userdefaults.setObject(logList, forKey: "logList")
            
         }
         

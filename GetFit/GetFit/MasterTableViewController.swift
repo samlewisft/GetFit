@@ -2,22 +2,21 @@
 //  MasterTableViewController.swift
 //  GetFit
 //
-//  Created by Samuel Lewis on 18/02/2015.
-//  Copyright (c) 2015 Samuel Lewis. All rights reserved.
+//  Created by Samuel Lewis.
 //
 
 import UIKit
 
 class MasterTableViewController: UITableViewController {
     
-    var toDoItems:NSMutableArray = NSMutableArray()
+    var logItems:NSMutableArray = NSMutableArray()
     
     override func viewDidAppear(animated: Bool) {
         var userDefaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        var toDoItemList:NSMutableArray? = userDefaults.objectForKey("itemList") as? NSMutableArray
+        var logItemList:NSMutableArray? = userDefaults.objectForKey("logList") as? NSMutableArray
         
-        if (toDoItemList != nil) {
-            toDoItems=toDoItemList!
+        if (logItemList != nil) {
+            logItems=logItemList!
         }
         self.tableView.reloadData()
         
@@ -25,13 +24,6 @@ class MasterTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,18 +31,16 @@ class MasterTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: - Table view data source
+    //Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView?) -> Int {
-        // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 1
     }
     
     override func tableView(tableView: UITableView?, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return toDoItems.count
+        return logItems.count
     }
     
     
@@ -62,7 +52,7 @@ class MasterTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cellid", forIndexPath: indexPath) as UITableViewCell
         
         
-        var todoItem :NSDictionary = toDoItems.objectAtIndex(indexPath.row) as NSDictionary
+        var gymItem :NSDictionary = logItems.objectAtIndex(indexPath.row) as NSDictionary
         
         if (indexPath.row % 2 == 0) {
             cell.backgroundColor = UIColor.clearColor()
@@ -79,9 +69,9 @@ class MasterTableViewController: UITableViewController {
         self.tableView.backgroundView = UIImageView(image: UIImage(named: "wallpaper5"))
         
         cell.textLabel?.textColor = UIColor.whiteColor()
-        cell.textLabel?.text = todoItem.objectForKey("title") as? String
+        cell.textLabel?.text = gymItem.objectForKey("title") as? String
         cell.detailTextLabel?.textColor = UIColor.whiteColor()
-        cell.detailTextLabel?.text = todoItem.objectForKey("date") as? String
+        cell.detailTextLabel?.text = gymItem.objectForKey("date") as? String
         
         return cell
     }
@@ -135,7 +125,7 @@ class MasterTableViewController: UITableViewController {
             var indexPath:NSIndexPath = self.tableView.indexPathForSelectedRow()!
             var detailViewController:DetailsViewController = segue.destinationViewController as DetailsViewController
             
-            detailViewController.todoData = toDoItems.objectAtIndex(indexPath.row) as NSDictionary
+            detailViewController.logData = logItems.objectAtIndex(indexPath.row) as NSDictionary
             
         }
         

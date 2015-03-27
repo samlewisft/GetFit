@@ -2,8 +2,7 @@
 //  DetailsViewController.swift
 //  GetFit
 //
-//  Created by Samuel Lewis on 18/02/2015.
-//  Copyright (c) 2015 Samuel Lewis. All rights reserved.
+//  Created by Samuel Lewis.
 //
 
 import UIKit
@@ -21,7 +20,7 @@ class DetailsViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var titleText: UITextField!
     @IBOutlet var titleComments: UITextView!
     
-    var todoData:NSDictionary = NSDictionary()
+    var logData:NSDictionary = NSDictionary()
     
     
     override func viewDidLoad() {
@@ -36,14 +35,14 @@ class DetailsViewController: UIViewController, UITextFieldDelegate {
         titleTime.userInteractionEnabled=false
         
         
-        titleText.text=todoData.objectForKey("title") as String
-        titleComments.text=todoData.objectForKey("details") as String
-        titleReps.text=todoData.objectForKey("reps") as String
-        titleWeight.text=todoData.objectForKey("weight") as String
-        titleDate.text=todoData.objectForKey("date") as String
-        titleDistance.text=todoData.objectForKey("distance") as String
-        titleType.text=todoData.objectForKey("type") as String
-        titleTime.text=todoData.objectForKey("time") as String
+        titleText.text=logData.objectForKey("title") as String
+        titleComments.text=logData.objectForKey("details") as String
+        titleReps.text=logData.objectForKey("reps") as String
+        titleWeight.text=logData.objectForKey("weight") as String
+        titleDate.text=logData.objectForKey("date") as String
+        titleDistance.text=logData.objectForKey("distance") as String
+        titleType.text=logData.objectForKey("type") as String
+        titleTime.text=logData.objectForKey("time") as String
         
         
 
@@ -59,17 +58,17 @@ class DetailsViewController: UIViewController, UITextFieldDelegate {
     @IBAction func deleteButtonClicked(sender: AnyObject) {
         
         var userDefault:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        var itemListArray:NSMutableArray = userDefault.objectForKey("itemList") as NSMutableArray
+        var logListArray:NSMutableArray = userDefault.objectForKey("logList") as NSMutableArray
         
-        var mutableItemList: NSMutableArray = NSMutableArray()
+        var mutablelogList: NSMutableArray = NSMutableArray()
         
-        for dict:AnyObject in itemListArray{
-            mutableItemList.addObject(dict as NSDictionary)
+        for dict:AnyObject in logListArray{
+            mutablelogList.addObject(dict as NSDictionary)
         }
         
-        mutableItemList.removeObject(todoData)
-        userDefault.removeObjectForKey("itemList")
-        userDefault.setObject(mutableItemList, forKey: "itemList")
+        mutablelogList.removeObject(logData)
+        userDefault.removeObjectForKey("logList")
+        userDefault.setObject(mutablelogList, forKey: "logList")
         userDefault.synchronize()
         
         self.navigationController?.popViewControllerAnimated(true)

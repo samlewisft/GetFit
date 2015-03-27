@@ -2,8 +2,7 @@
 //  TypesTableViewController.swift
 //  GetFit
 //
-//  Created by Samuel Lewis on 18/02/2015.
-//  Copyright (c) 2015 Samuel Lewis. All rights reserved.
+//  Created by Samuel Lewis.
 //
 
 import UIKit
@@ -14,7 +13,7 @@ protocol TypesTableViewControllerDelegate: class {
 
 class TypesTableViewController: UITableViewController {
   
-  let possibleTypesDictionary = ["gym":"Gym", "bakery":"Bakery", "bar":"Bar", "cafe":"Cafe", "grocery_or_supermarket":"Supermarket", "restaurant":"Restaurant"]
+    let possibleTypesDictionary = ["gym":"Gym", "bakery":"Bakery", "bar":"Bar", "cafe":"Cafe", "grocery_or_supermarket":"Supermarket", "restaurant":"Restaurant", "park":"Park",]
   
   
 
@@ -37,9 +36,23 @@ class TypesTableViewController: UITableViewController {
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    
     let cell = tableView.dequeueReusableCellWithIdentifier("TypeCell", forIndexPath: indexPath) as UITableViewCell
     let key = sortedKeys[indexPath.row]
     let type = possibleTypesDictionary[key]!
+    self.tableView.backgroundView = UIImageView(image: UIImage(named: "wallpaper5"))
+    cell.textLabel?.textColor = UIColor.yellowColor()
+
+    //every two rows display clear color
+    if (indexPath.row % 2 == 0) {
+        cell.backgroundColor = UIColor.clearColor()
+        
+    } else {
+        //set cell opacity
+        cell.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.2)
+        cell.textLabel?.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.0)
+    }
+    
     cell.textLabel?.text = type
     cell.imageView?.image = UIImage(named: key)
     cell.accessoryType = contains(selectedTypes!, key) ? .Checkmark : .None

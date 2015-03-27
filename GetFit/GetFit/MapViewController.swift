@@ -2,8 +2,7 @@
 //  MapViewController.swift
 //  GetFit
 //
-//  Created by Samuel Lewis on 18/02/2015.
-//  Copyright (c) 2015 Samuel Lewis. All rights reserved.
+//  Created by Samuel Lewis.
 //
 
 import UIKit
@@ -172,9 +171,8 @@ GMSMapViewDelegate {
   @IBOutlet var mapCenterPinImage: UIImageView!
   @IBOutlet var pinImageVerticalConstraint: NSLayoutConstraint!
   //var searchedTypes = ["gym", "cafe", "restaurant",]
-  var searchedTypes = ["gym", "bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant", ]
+  var searchedTypes = ["gym", "bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant", "park",]
 
-  
   let locationManager = CLLocationManager()
 
   override func viewDidLoad() {
@@ -191,15 +189,11 @@ GMSMapViewDelegate {
   
   //
   
-  // 1
   func locationManager(manager: CLLocationManager!, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-    // 2
     if status == .AuthorizedWhenInUse {
       
-      // 3
       locationManager.startUpdatingLocation()
       
-      //4
       mapView.myLocationEnabled = true
       mapView.settings.myLocationButton = true
     }

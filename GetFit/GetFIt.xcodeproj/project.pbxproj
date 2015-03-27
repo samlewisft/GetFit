@@ -32,11 +32,11 @@
 		597228CA1ABFA86800172906 /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597228C91ABFA86800172906 /* MasterTableViewController.swift */; };
 		597228CC1ABFA9B000172906 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597228CB1ABFA9B000172906 /* AddViewController.swift */; };
 		597228CE1ABFA9BD00172906 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597228CD1ABFA9BD00172906 /* DetailsViewController.swift */; };
+		599F881A1AC4DEAB0061F795 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 599F88191AC4DEAB0061F795 /* Images.xcassets */; };
 		5E07B5CA1A94EDD300B45151 /* DisplayExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07B5C91A94EDD300B45151 /* DisplayExerciseViewController.swift */; };
 		5ECB9BCC1A94DA8D0029940F /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECB9BCB1A94DA8D0029940F /* Exercise.swift */; };
 		712D945819774FBB0087530D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712D945719774FBB0087530D /* AppDelegate.swift */; };
 		712D945D19774FBB0087530D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 712D945B19774FBB0087530D /* Main.storyboard */; };
-		712D945F19774FBB0087530D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 712D945E19774FBB0087530D /* Images.xcassets */; };
 		712D946B19774FBB0087530D /* GetFitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712D946A19774FBB0087530D /* GetFitTests.swift */; };
 		716A427519775A9F003BD279 /* ExerciseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716A427419775A9F003BD279 /* ExerciseTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -78,13 +78,13 @@
 		597228C91ABFA86800172906 /* MasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
 		597228CB1ABFA9B000172906 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		597228CD1ABFA9BD00172906 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		599F88191AC4DEAB0061F795 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5E07B5C91A94EDD300B45151 /* DisplayExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayExerciseViewController.swift; sourceTree = "<group>"; };
 		5ECB9BCB1A94DA8D0029940F /* Exercise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		712D945219774FBB0087530D /* GetFIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetFIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		712D945619774FBB0087530D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		712D945719774FBB0087530D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		712D945C19774FBB0087530D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		712D945E19774FBB0087530D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		712D946419774FBB0087530D /* GetFItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetFItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		712D946919774FBB0087530D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		712D946A19774FBB0087530D /* GetFitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFitTests.swift; sourceTree = "<group>"; };
@@ -188,8 +188,8 @@
 		599F88171AC3C0100061F795 /* Find A Gym */ = {
 			isa = PBXGroup;
 			children = (
-				597228961ABE7FB900172906 /* TypesTableViewController.swift */,
 				597228921ABE7F9E00172906 /* MapViewController.swift */,
+				597228961ABE7FB900172906 /* TypesTableViewController.swift */,
 			);
 			name = "Find A Gym";
 			sourceTree = "<group>";
@@ -231,7 +231,7 @@
 				712D945B19774FBB0087530D /* Main.storyboard */,
 				597228981ABE7FC900172906 /* Controllers */,
 				597228991ABE7FD200172906 /* Google Maps Model */,
-				712D945E19774FBB0087530D /* Images.xcassets */,
+				599F88191AC4DEAB0061F795 /* Images.xcassets */,
 				712D945519774FBB0087530D /* Supporting Files */,
 			);
 			path = GetFit;
@@ -349,9 +349,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				712D945D19774FBB0087530D /* Main.storyboard in Resources */,
+				599F881A1AC4DEAB0061F795 /* Images.xcassets in Resources */,
 				597228A21ABE804000172906 /* MarkerInfoView.xib in Resources */,
 				597228C81ABE82D000172906 /* GoogleMaps.bundle in Resources */,
-				712D945F19774FBB0087530D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

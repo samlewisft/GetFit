@@ -2,12 +2,13 @@
 //  Exercise.swift
 //  GetFit
 //
-//  Created by Samuel Lewis on 18/02/2015.
-//  Copyright (c) 2015 Samuel Lewis. All rights reserved.
+//  Created by Samuel Lewis.
 //
 
 import Foundation
 
+
+//Creating the array structure for the exercise workouts
 struct Exercise {
     let exerciseCategory : String
     let name : String

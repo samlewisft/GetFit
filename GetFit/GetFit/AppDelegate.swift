@@ -4,11 +4,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    // 1
+    //My personal Google Maps API Key as requested from the google developer portal
     let googleMapsApiKey = "AIzaSyCSaUFcJYxiwoqm-cU0JvpkI0PQHDwYlk4"
     
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
-        // 2
         GMSServices.provideAPIKey(googleMapsApiKey)
         return true
     }

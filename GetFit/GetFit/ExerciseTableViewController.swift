@@ -1,8 +1,7 @@
 //
 //  ExerciseTableViewController.swift
 //
-//
-//  Copyright (c) 2015 Samuel Lewis LLC. All rights reserved.
+//  Created by Samuel Lewis.
 //
 
 import UIKit
@@ -14,18 +13,15 @@ class ExerciseTableViewController : UITableViewController, UISearchBarDelegate, 
     var filteredExer = [Exercise]()
     
     override func viewDidAppear(animated: Bool) {
-        // 1
+        //setting the navigation bar to custom design with my logo as a UIImage
         var nav = self.navigationController?.navigationBar
-        // 2
+        //black bar with yellow text
         nav?.barStyle = UIBarStyle.Black
         nav?.tintColor = UIColor.yellowColor()
-        // 3
         let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
         imageView.contentMode = .ScaleAspectFit
-        // 4
         let image = UIImage(named: "getfitlogo")
         imageView.image = image
-        // 5
         navigationItem.titleView = imageView
     }
     
@@ -35,7 +31,7 @@ class ExerciseTableViewController : UITableViewController, UISearchBarDelegate, 
         
         self.exercises = [
             
-            //Data for exercises array
+            //Begin enterring the long list of data into the exercises array
             
             
             //------------------------------------------------------------------------------------------------------
@@ -121,9 +117,7 @@ class ExerciseTableViewController : UITableViewController, UISearchBarDelegate, 
             Exercise(exerciseCategory: "Legs", name: "Bear Crawl Sled Drags", desc: "Wearing either a harness or a loose weight belt, attach the chain to the back so that you will be facing away from the sled. Bend down so that your hands are on the ground. Your back should be flat and knees bent. This is your starting position.Begin by driving with legs, alternating left and right. Use your hands to maintain balance and to help pull. Try to keep your back flat as you move over a given distance.", imageName: "legs_bear_1", imageNameTwo: "legs_bear_2", Wallpaper: "wallpaper5"),
             
             Exercise(exerciseCategory: "Legs", name: "Dumbbell Squat", desc: "Stand up straight while holding a dumbbell on each hand (palms facing the side of your legs). Position your legs using a shoulder width medium stance with the toes slightly pointed out. Keep your head up at all times as looking down will get you off balance and also maintain a straight back. This will be your starting position. Note: For the purposes of this discussion we will use the medium stance described above which targets overall development; however you can choose any of the three stances discussed in the foot stances section. Begin to slowly lower your torso by bending the knees as you maintain a straight posture with the head up. Continue down until your thighs are parallel to the floor. Tip: If you performed the exercise correctly, the front of the knees should make an imaginary straight line with the toes that is perpendicular to the front. If your knees are past that imaginary line (if they are past your toes) then you are placing undue stress on the knee and the exercise has been performed incorrectly. Begin to raise your torso as you exhale by pushing the floor with the heel of your foot mainly as you straighten the legs again and go back to the starting position. Repeat for the recommended amount of repetitions", imageName: "legs_dsquat_1", imageNameTwo: "legs_dsquat_2", Wallpaper: "wallpaper5"),
-            //------------------------------------------------------------------------------------------------------
-            
-            
+            //-----------------------------------------------------------------------------------------------------
         ]
         
         self.tableView.reloadData()
@@ -138,9 +132,10 @@ class ExerciseTableViewController : UITableViewController, UISearchBarDelegate, 
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //ask for a reusable cell from the tableview, the tableview will create a new one if it doesn't have any
+        //asks for a reusable cell from tableview, if none exists; create a new one
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell
         
+        //every two rows display clear color
         if (indexPath.row % 2 == 0) {
             cell.backgroundColor = UIColor.clearColor()
             
@@ -151,18 +146,21 @@ class ExerciseTableViewController : UITableViewController, UISearchBarDelegate, 
         }
         
         //Text Color.
-        cell.textLabel?.textColor = UIColor.whiteColor()
+        cell.textLabel?.textColor = UIColor.yellowColor()
         
         var exer : Exercise
         // Check to see whether the normal table or search results table is being displayed and set the exercises object from the appropriate array
         if tableView == self.searchDisplayController!.searchResultsTableView {
             exer = filteredExer[indexPath.row]
-            //Add icons for prototype cells
+            //Add icons for cells
             var imageName = UIImage(named: exer.exerciseCategory)
             cell.imageView?.image = imageName
             self.tableView.rowHeight = 70
-            self.tableView.backgroundView = UIImageView(image: UIImage(named: "wallpaper5"))
+            cell.textLabel?.textColor = UIColor.blackColor()
             
+
+            //adding the custom background used throughut the application
+            self.tableView.backgroundView = UIImageView(image: UIImage(named: "wallpaper5"))
             
             
         } else {
@@ -175,7 +173,7 @@ class ExerciseTableViewController : UITableViewController, UISearchBarDelegate, 
             self.tableView.backgroundView = UIImageView(image: UIImage(named: "wallpaper5"))
         }
         
-        // Configure the cell
+        // Configure the cell label to the exercise name
         cell.textLabel?.text = exer.name
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         
@@ -207,6 +205,9 @@ class ExerciseTableViewController : UITableViewController, UISearchBarDelegate, 
             return true
     }
     
+    
+    //creating the custom segue identifier, 'exerciseDetail'
+    //this will correctly move the user to the appropiate view controller in the function below
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         self.performSegueWithIdentifier("exerciseDetail", sender: tableView)
@@ -217,9 +218,10 @@ class ExerciseTableViewController : UITableViewController, UISearchBarDelegate, 
         if segue.identifier == "exerciseDetail" {
             let DetailViewController = segue.destinationViewController as UIViewController
             let scene = segue.destinationViewController as DisplayExerciseViewController
-            //let DescriptionString = segue.destin
+
             if sender as UITableView == self.searchDisplayController!.searchResultsTableView {
                 let indexPath = self.searchDisplayController!.searchResultsTableView.indexPathForSelectedRow()!
+                //linking the labels, text fields and images to the exercise data from the array
                 let destinationTitle = self.filteredExer[indexPath.row].name
                 scene.title = destinationTitle
                 let destinationDesc = self.filteredExer[indexPath.row].desc

@@ -1,8 +1,7 @@
 
 //  GetFit
 //
-//  Created by Samuel Lewis on 18/02/2015.
-//  Copyright (c) 2015 Samuel Lewis. All rights reserved.
+//  Created by Samuel Lewis.
 //
 class PlaceMarker: GMSMarker {
   // 1
