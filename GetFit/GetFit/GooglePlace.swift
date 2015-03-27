@@ -2,8 +2,7 @@
 //  GooglePlace.swift
 //  Feed Me
 //
-//  Created by Ron Kliffer on 8/30/14.
-//  Copyright (c) 2014 Ron Kliffer. All rights reserved.
+//  Created by Samuel Lewis
 //
 
 import UIKit

@@ -16,10 +16,9 @@ GMSMapViewDelegate {
     fetchNearbyPlaces(mapView.camera.target)
   }
     
-  @IBOutlet var addressLabel: UILabel!
-    
-    @IBOutlet var segmentSegue: UISegmentedControl!
-  @IBAction func mapTypeSegmentPressed(sender: AnyObject) {
+@IBOutlet var addressLabel: UILabel!
+@IBOutlet var segmentSegue: UISegmentedControl!
+@IBAction func mapTypeSegmentPressed(sender: AnyObject) {
     let segmentSegue = sender as UISegmentedControl
     switch segmentSegue.selectedSegmentIndex {
     case 0:

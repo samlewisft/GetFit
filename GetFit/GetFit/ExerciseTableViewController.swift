@@ -207,7 +207,7 @@ class ExerciseTableViewController : UITableViewController, UISearchBarDelegate, 
     
     
     //creating the custom segue identifier, 'exerciseDetail'
-    //this will correctly move the user to the appropiate view controller in the function below
+    //this will correctly move the user to the exercise view controller in the function below
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         self.performSegueWithIdentifier("exerciseDetail", sender: tableView)
